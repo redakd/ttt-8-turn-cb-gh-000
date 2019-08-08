@@ -1,1 +1,16 @@
 #!/usr/bin/env ruby
+require_relative "../lib/turn.rb"
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+puts "Welcome to Tic Tac Toe!"
+
+loop do
+  number = count_allow_place(board)
+  display_board(board)
+  index = turn(board)
+  index1 = input_to_index(index)
+  move(board, index1,)
+  if number == 0
+    break
+  end
+end
